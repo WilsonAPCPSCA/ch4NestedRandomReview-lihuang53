@@ -15,8 +15,10 @@ public class Ch4Part1Problem5 {
 		System.out.print("How many times would you like the dice to be tossed?");
 		int times = in.nextInt();
 		System.out.println("Here is the sequence of sums, one for each toss:");
+		
 		int sum;
 		String result="";
+		
 		for(int i=times;i>=1;i--){
 			sum=(int)(Math.random()*6)+2+(int)(Math.random()*6);
 			System.out.print(sum+" ");
@@ -25,7 +27,7 @@ public class Ch4Part1Problem5 {
 			else if(sum==12)result+="C";
 			else result+=Integer.toString(sum);
 		}
-		System.out.println(result);
+		
 		for(int c=2;c<=12;c++){
 			System.out.printf("%4s",c+": ");
 			for(int j=0;j<result.length();j++){
